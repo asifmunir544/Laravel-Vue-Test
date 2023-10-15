@@ -1,0 +1,138 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Font-Awesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+//questions index.blade
+.counters{
+    margin-right: 30px;
+    font-size: 10px;
+    text-align: center;
+    strong{
+        display: block;
+        font-size: 2em;
+    }
+    .vote, .answer{
+        width: 60px;
+        height: 60px;
+    }
+    .status{
+        &.unanswered{
+            border: none;
+        }
+        &.answered{
+            border: 1px solid $green;
+            color: $green
+        }
+        &.answered-accepted{
+            background: $green;
+            color: $white;
+        }
+    }
+    .view{
+        margin-top: 10px;
+    }
+}
+
+//question show.blade
+.vote-controls{
+    min-width: 60px;
+    //margin-right: 30px;
+    text-align: center;
+    color: $gray-700;
+
+    span, a {
+        display: block;
+    }
+
+    span{
+        &.votes-count{
+            font-size: 25px;
+        }
+        &.favorites-count{
+            font-size: 12px;
+        }
+    }
+
+    a{
+        cursor: pointer;
+        color: $gray-600;
+
+        &.off, &.off:hover{
+            color: $gray-500;
+        }
+
+        &.favorite{
+            &.favorited, &.favorited:hover{
+                color: $yellow;
+            }
+        }
+
+        &.vote-accepted{
+            color: $green;
+        }
+    }
+}
+
+.post{
+    padding: 20px 0;
+    &:not(:last-child){
+        border-bottom: 1px solid rgba($black, 0.2);
+    }
+}
+
+[v-cloak] {
+    display: none
+}
+
+.nav-tabs .nav-link.active{
+    background-color: #FFFFFF;
+    border-bottom: #FFFFFF;
+}
+
+.btn-primary {
+    --bs-btn-color: #FFF;
+    --bs-btn-hover-color: #FFF;
+    --bs-btn-active-color: #FFF;
+    --bs-btn-disabled-color: #FFF;
+}
+
+.btn-danger {
+    --bs-btn-color: #FFF;
+    --bs-btn-hover-color: #FFF;
+    --bs-btn-active-color: #FFF;
+    --bs-btn-disabled-color: #FFF;
+}
+
+.btn-info {
+    --bs-btn-color: #FFF;
+    --bs-btn-hover-color: #FFF;
+    --bs-btn-active-color: #FFF;
+    --bs-btn-disabled-color: #FFF;
+}
+
+.btn-outline-primary {
+    --bs-btn-hover-color: #FFF;
+    --bs-btn-active-color: #FFF;
+}
+
+.btn-outline-danger {
+    --bs-btn-hover-color: #FFF;
+    --bs-btn-active-color: #FFF;
+}
+
+.btn-outline-info{
+    --bs-btn-hover-color: #FFF;
+    --bs-btn-active-color: #FFF;
+}
